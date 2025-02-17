@@ -3,7 +3,7 @@ pipeline {
 
    environment{
     PATH="/opt/maven/bin:$PATH"
-
+}
     stages {
         stage('Git Clone') {
             steps {
@@ -13,7 +13,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'clean install'
             }
         }
     }
