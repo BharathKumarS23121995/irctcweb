@@ -1,9 +1,8 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven 3'  // Use the configured Maven tool
-    }
+   environment{
+    PATH="/opt/maven/bin:$PATH"
 
     stages {
         stage('Git Clone') {
